@@ -48,6 +48,10 @@ class Controller:
                         self.hero.move_left()
                     elif(event.key == pygame.K_RIGHT):
                         self.hero.move_right()
+                    elif(event.key == pygame.K_SPACE):
+                        self.hero.explosion()
+                        self.hero = hero.Hero("Conan", 50, 80, "assets/explosion.png")
+                        self.hero.health = 0
 
             # check for collisions
             fights = pygame.sprite.spritecollide(self.hero, self.enemies, True)

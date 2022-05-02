@@ -31,6 +31,10 @@ class Hero(pygame.sprite.Sprite):
     def move_right(self):
         self.rect.x += self.speed
 
+    # super power of explosion
+    def explosion(self):
+        self.image = pygame.image.load("assets/explosion.png").convert_alpha()
+      
     def fight(self, opponent):
         if(random.randrange(3)):
             self.health -= 1
